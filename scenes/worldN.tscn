@@ -121,7 +121,7 @@ texture_region_size = Vector2i(32, 32)
 1:2/0 = 0
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 8.25, -11.9324, 6.54074, -8.04334, 5.83363, -4.33103, 5.12652, -0.0883884, 3.88909, 3.62392, 2.91682, 7.68979, 2.03293, 11.844, 0.883884, 16, 0.265165, 16, 16, -16, 16)
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 8.5, 16, 0.75, 16, 16, -16, 16)
 1:2/1 = 1
 1:2/1/flip_h = true
 1:2/1/transpose = true
@@ -137,7 +137,7 @@ texture_region_size = Vector2i(32, 32)
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -0.25, -13.435, -1.06066, -11.75, -1.5625, -10.4375, -1.9375, -8.13173, -2.20971, -6.76171, -2.74004, -4.1875, -3.0625, -2.56326, -3.71231, -0.53033, -4.06586, 1.25, -4.6875, 2.51907, -4.77297, 3.49134, -5.08233, 4.5625, -5.5625, 5.52427, -5.78944, 7.42462, -6.31977, 8.3527, -6.45235, 9.45755, -6.76171, 10.2972, -6.93849, 11.5789, -7.20365, 13.1257, -7.77818, 16, -7.9375, 16, 16, -16, 16)
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.75, 16, -7.5, 16, 16, -16, 16)
 2:2/1 = 1
 2:2/1/flip_h = true
 2:2/1/transpose = true
@@ -153,7 +153,7 @@ texture_region_size = Vector2i(32, 32)
 3:2/0 = 0
 3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:2/0/physics_layer_0/angular_velocity = 0.0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8.79464, -13.9654, -8.97142, -12.6395, -9.19239, -11.6673, -9.81111, -9.63433, -10.0321, -7.5572, -10.8718, -5.12652, -11.0043, -3.27037, -11.9324, -1.14905, -11.9766, 0.574524, -12.9047, 2.96101, -13.0815, 5.21491, -13.7002, 7.29204, -14.0096, 8.66206, -14.7167, 11.1811, -14.8492, 12.5511, -16, 16, -16, 16, 16, -16, 16)
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -7.5, 16, -16, 16, 16, -16, 16)
 3:2/1 = 1
 3:2/1/flip_h = true
 3:2/1/transpose = true
@@ -1028,6 +1028,7 @@ script = ExtResource("1_vurp2")
 
 [node name="Player" parent="." instance=ExtResource("1_d65fb")]
 position = Vector2(2447, 30)
+floor_snap_length = 0.0
 
 [node name="Level" type="Node" parent="."]
 

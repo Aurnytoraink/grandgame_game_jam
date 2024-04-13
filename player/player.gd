@@ -14,8 +14,8 @@ func _physics_process(delta):
 	#Gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY 
-		#if position.y > LOWEST_POINT:
-			
+		if position.y > LOWEST_POINT:
+			get_tree().reload_current_scene()#point de départ
 	if velocity.y>1000:
 		velocity.y=1000
 	

@@ -52,6 +52,7 @@ resource_local_to_scene = true
 
 [node name="Player" parent="." instance=ExtResource("1_1nmmt")]
 position = Vector2(461, 137)
+safe_margin = 0.001
 
 [node name="Wurbain" type="Node" parent="."]
 
