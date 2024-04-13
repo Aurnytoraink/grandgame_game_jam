@@ -1,7 +1,5 @@
-[gd_scene load_steps=33 format=3 uid="uid://crrkm8hb4f8f6"]
+[gd_scene load_steps=32 format=3 uid="uid://clf41tbvkgna6"]
 
-[ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://scenes/player.tscn" id="1_d65fb"]
-[ext_resource type="Script" path="res://scenes/worldN.gd" id="1_vurp2"]
 [ext_resource type="Texture2D" uid="uid://co2do8gbkdboc" path="res://dirt_tiles_sheet.png" id="2_jdqbf"]
 [ext_resource type="Texture2D" uid="uid://sab7t4rhtqon" path="res://tree01_leaves.png" id="3_su7sy"]
 [ext_resource type="Texture2D" uid="uid://d0wlea1kggcg3" path="res://tree01_log.png" id="4_sduy4"]
@@ -40,6 +38,9 @@ size = Vector2(1275.63, 1103.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4ahg"]
 size = Vector2(3704, 654)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x62be"]
+size = Vector2(65, 289)
 
 [sub_resource type="QuadMesh" id="QuadMesh_gyuwj"]
 
@@ -1024,129 +1025,120 @@ sources/3 = SubResource("TileSetAtlasSource_w1th5")
 sources/4 = SubResource("TileSetAtlasSource_07lsm")
 
 [node name="WorldN" type="Node2D"]
-script = ExtResource("1_vurp2")
 
-[node name="Player" parent="." instance=ExtResource("1_d65fb")]
-position = Vector2(2447, 30)
-floor_snap_length = 0.0
-
-[node name="Level" type="Node" parent="."]
-
-[node name="Platform" type="StaticBody2D" parent="Level"]
+[node name="Platform" type="StaticBody2D" parent="."]
 position = Vector2(507, 240)
 
-[node name="Platform2" type="StaticBody2D" parent="Level"]
+[node name="Platform2" type="StaticBody2D" parent="."]
 position = Vector2(1632, 262)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Level/Platform2"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
 modulate = Color(0.290196, 0.498039, 0, 1)
 position = Vector2(7072, -2815)
 scale = Vector2(10.529, 1)
 mesh = SubResource("QuadMesh_30cjd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
 position = Vector2(7348, -21.0938)
 shape = SubResource("RectangleShape2D_pwe6x")
 one_way_collision_margin = 37.5
 
-[node name="Platform3" type="StaticBody2D" parent="Level"]
+[node name="Platform3" type="StaticBody2D" parent="."]
 position = Vector2(475, 234)
 
-[node name="Platform4" type="StaticBody2D" parent="Level"]
+[node name="Platform4" type="StaticBody2D" parent="."]
 position = Vector2(507, 240)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
 position = Vector2(7357.5, -140.75)
 shape = SubResource("RectangleShape2D_720h5")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Level/Platform4"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform4"]
 position = Vector2(14681, -3754)
 scale = Vector2(2997.62, -948.875)
 mesh = SubResource("QuadMesh_ulc7s")
 texture = SubResource("ViewportTexture_x11qa")
 
-[node name="Platform5" type="StaticBody2D" parent="Level"]
+[node name="Platform5" type="StaticBody2D" parent="."]
 position = Vector2(507, 240)
 
-[node name="CollisionsShape2D" type="CollisionShape2D" parent="Level/Platform5"]
+[node name="CollisionsShape2D" type="CollisionShape2D" parent="Platform5"]
 position = Vector2(10028, 156.875)
 shape = SubResource("RectangleShape2D_p7d1f")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Level/Platform5"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform5"]
 position = Vector2(13651, -3694)
 scale = Vector2(1268.25, -1076.75)
 mesh = SubResource("QuadMesh_ulc7s")
 texture = SubResource("ViewportTexture_x11qa")
 
-[node name="Platform6" type="StaticBody2D" parent="Level"]
+[node name="Platform6" type="StaticBody2D" parent="."]
 position = Vector2(507, 240)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6"]
 position = Vector2(12601.4, -81)
 shape = SubResource("RectangleShape2D_io2bk")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Level/Platform6"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform6"]
 position = Vector2(14590, -4785)
 scale = Vector2(4952.13, -521.875)
 mesh = SubResource("QuadMesh_ulc7s")
 texture = SubResource("ViewportTexture_x11qa")
 
-[node name="Platform7" type="StaticBody2D" parent="Level"]
+[node name="Platform7" type="StaticBody2D" parent="."]
 position = Vector2(507, 240)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7"]
 position = Vector2(13262, -269)
 shape = SubResource("RectangleShape2D_ws215")
 
-[node name="Platform8" type="StaticBody2D" parent="Level"]
+[node name="Platform8" type="StaticBody2D" parent="."]
 position = Vector2(507, 240)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform8"]
 position = Vector2(9881, -2172)
 shape = SubResource("RectangleShape2D_8x2ew")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Level/Platform8"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform8"]
 position = Vector2(9877.69, -2168.19)
 scale = Vector2(1876.62, -596.375)
 mesh = SubResource("QuadMesh_ulc7s")
 texture = SubResource("ViewportTexture_x11qa")
 
-[node name="Platform9" type="StaticBody2D" parent="Level"]
+[node name="Platform9" type="StaticBody2D" parent="."]
 position = Vector2(507, 240)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform9"]
 position = Vector2(11406, -366)
 shape = SubResource("RectangleShape2D_h55o1")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Level/Platform9"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform9"]
 position = Vector2(9608, -3920)
 scale = Vector2(1792.12, -1579.38)
 mesh = SubResource("QuadMesh_ulc7s")
 texture = SubResource("ViewportTexture_x11qa")
 
-[node name="Platform10" type="StaticBody2D" parent="Level"]
+[node name="Platform10" type="StaticBody2D" parent="."]
 position = Vector2(1661, -96)
 physics_material_override = SubResource("PhysicsMaterial_1eidm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform10"]
 position = Vector2(14290, 452)
 shape = SubResource("RectangleShape2D_y4ahg")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Level/Platform10"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform10"]
 position = Vector2(6899, -1581)
 scale = Vector2(1370.13, -910)
 mesh = SubResource("QuadMesh_ulc7s")
 texture = SubResource("ViewportTexture_x11qa")
 
-[node name="Platform11" type="StaticBody2D" parent="Level"]
+[node name="Platform12" type="StaticBody2D" parent="."]
 position = Vector2(507, 240)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Level/Platform11"]
-position = Vector2(15384, -2115)
-scale = Vector2(3697.62, 522.25)
-mesh = SubResource("QuadMesh_ulc7s")
-texture = SubResource("ViewportTexture_x11qa")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform12"]
+position = Vector2(-241, -29)
+shape = SubResource("RectangleShape2D_x62be")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 position = Vector2(6741, -1490.5)
@@ -1166,7 +1158,8 @@ mesh = SubResource("QuadMesh_c30dg")
 
 [node name="MeshInstance2D4" type="MeshInstance2D" parent="."]
 position = Vector2(6756, -2501.56)
-scale = Vector2(-278.646, 1205.13)
+rotation = 3.14159
+scale = Vector2(278.646, -1205.13)
 mesh = SubResource("QuadMesh_favtt")
 
 [node name="MeshInstance2D5" type="MeshInstance2D" parent="."]
