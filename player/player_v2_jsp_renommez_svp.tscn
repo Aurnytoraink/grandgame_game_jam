@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://6gummyjhcwy6"]
+
+[ext_resource type="Texture2D" uid="uid://csd1vxgdx0wd0" path="res://icon.svg" id="1_dwuwk"]
+[ext_resource type="Script" path="res://player/components/movement_component.gd" id="2_kcxbw"]
+[ext_resource type="Script" path="res://player/components/dash_component.gd" id="3_56his"]
+[ext_resource type="Script" path="res://player/components/grappling_component.gd" id="4_ph3uo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haw86"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t30qm"]
+size = Vector2(19.6376, 2.24556)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.00146703
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_dwuwk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_haw86")
+
+[node name="MovementComponent" type="Node" parent="."]
+script = ExtResource("2_kcxbw")
+
+[node name="DashComponent" type="Node" parent="."]
+script = ExtResource("3_56his")
+
+[node name="GrapplingComponent" type="Node" parent="."]
+script = ExtResource("4_ph3uo")
+
+[node name="Line2D" type="Line2D" parent="GrapplingComponent"]
+position = Vector2(-84, -153)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="GrapplingComponent"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="GrapplingComponent/CharacterBody2D"]
+visible = false
+z_index = -1
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_dwuwk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrapplingComponent/CharacterBody2D"]
+scale = Vector2(0.312153, -2.67194)
+shape = SubResource("RectangleShape2D_t30qm")
+debug_color = Color(0.882353, 0.337255, 0, 0.419608)
