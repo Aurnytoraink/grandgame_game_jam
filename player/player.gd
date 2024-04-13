@@ -30,7 +30,10 @@ func _physics_process(delta):
 	$Camera2D.set_drag_horizontal_offset(horizontal_direction * 2)
 	if horizontal_direction:
 		velocity.x = horizontal_direction * SPEED
+		$AnimationPlayer.play("walk")
+		$Sprite2D.flip_h = true if (horizontal_direction == -1) else false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		$AnimationPlayer.stop()
 
 	move_and_slide()
