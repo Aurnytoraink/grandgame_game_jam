@@ -5,8 +5,7 @@ extends CharacterBody2D
 @export var GRAVITY = 30
 @export var JUMP_VELOCITY = 400.0
 @export var LOWEST_POINT = 6000.0 #Fall -> die
-@export var Player_PosX = position.x
-@export var Player_PosY = position.y
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
@@ -20,8 +19,6 @@ func _physics_process(delta):
 			get_tree().reload_current_scene()#point de départ
 	if velocity.y>1000:
 		velocity.y=1000
-	Player_PosX = position.x
-	Player_PosY = position.y
 	
 
 			
