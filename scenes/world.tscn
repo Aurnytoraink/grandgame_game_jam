@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://scenes/player.tscn" id="1_1nmmt"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1n516"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ftpu6"]
 
 [sub_resource type="TileSet" id="TileSet_ycea4"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_1n516")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_ftpu6")
 navigation_layer_0/layers = 1
 navigation_layer_1/layers = 2
 
