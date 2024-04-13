@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://dp7d7qtep5m7v"]
 
 [ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://scenes/player.tscn" id="1_1nmmt"]
-[ext_resource type="TileSet" uid="uid://dat4abkx4p6p5" path="res://TileSetLayerGraphic.tres" id="2_m4wgy"]
+[ext_resource type="TileSet" uid="uid://d38nj55cyd7wa" path="res://TileSetLayerGraphic.tres" id="2_m4wgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uoeyc"]
 size = Vector2(14466.8, 151)
