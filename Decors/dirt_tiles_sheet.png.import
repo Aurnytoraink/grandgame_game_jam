@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxffxtb80suau"
-path="res://.godot/imported/tree02_log.png-6a5a92126d20425b3bbd16c6f8f608dd.ctex"
+uid="uid://co2do8gbkdboc"
+path="res://.godot/imported/dirt_tiles_sheet.png-f74b01d34f687f154a10a24d7119b795.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tree02_log.png"
-dest_files=["res://.godot/imported/tree02_log.png-6a5a92126d20425b3bbd16c6f8f608dd.ctex"]
+source_file="res://Decors/dirt_tiles_sheet.png"
+dest_files=["res://.godot/imported/dirt_tiles_sheet.png-f74b01d34f687f154a10a24d7119b795.ctex"]
 
 [params]
 

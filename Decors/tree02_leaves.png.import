@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co2do8gbkdboc"
-path="res://.godot/imported/dirt_tiles_sheet.png-21a1affd126959eb00e22891397d0780.ctex"
+uid="uid://d3rakbs7mt5hq"
+path="res://.godot/imported/tree02_leaves.png-c292a41f3cc2fa2c960145b68ddd023e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dirt_tiles_sheet.png"
-dest_files=["res://.godot/imported/dirt_tiles_sheet.png-21a1affd126959eb00e22891397d0780.ctex"]
+source_file="res://Decors/tree02_leaves.png"
+dest_files=["res://.godot/imported/tree02_leaves.png-c292a41f3cc2fa2c960145b68ddd023e.ctex"]
 
 [params]
 

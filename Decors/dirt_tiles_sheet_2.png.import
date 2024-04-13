@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crq5hjmpsotyu"
-path="res://.godot/imported/MDR c drole.jpg-c9f0d99994b4c3a0589ca375592b6fe7.ctex"
+uid="uid://b3h4xg52rgtqc"
+path="res://.godot/imported/dirt_tiles_sheet_2.png-c3ac6bcc90692981b9bb8dac649cc846.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MDR c drole.jpg"
-dest_files=["res://.godot/imported/MDR c drole.jpg-c9f0d99994b4c3a0589ca375592b6fe7.ctex"]
+source_file="res://Decors/dirt_tiles_sheet_2.png"
+dest_files=["res://.godot/imported/dirt_tiles_sheet_2.png-c3ac6bcc90692981b9bb8dac649cc846.ctex"]
 
 [params]
 

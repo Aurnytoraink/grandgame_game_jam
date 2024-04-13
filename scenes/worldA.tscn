@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://scenes/player.tscn" id="1_5ea81"]
 [ext_resource type="Script" path="res://scenes/worldA.gd" id="1_w2hof"]
-[ext_resource type="Texture2D" uid="uid://co2do8gbkdboc" path="res://dirt_tiles_sheet.png" id="3_q7crt"]
-[ext_resource type="Texture2D" uid="uid://sab7t4rhtqon" path="res://tree01_leaves.png" id="4_cqvw6"]
-[ext_resource type="Texture2D" uid="uid://d0wlea1kggcg3" path="res://tree01_log.png" id="5_h6hn4"]
-[ext_resource type="Texture2D" uid="uid://cxffxtb80suau" path="res://tree02_log.png" id="6_0dw4n"]
-[ext_resource type="Texture2D" uid="uid://be5r71mlcxxsy" path="res://tree01_logtest.png" id="7_a2ldn"]
-[ext_resource type="Texture2D" uid="uid://c4wgqdph0ky3n" path="res://concrete_tiles_sheet_new.png" id="8_xmk06"]
+[ext_resource type="Texture2D" uid="uid://co2do8gbkdboc" path="res://Decors/dirt_tiles_sheet.png" id="3_q7crt"]
+[ext_resource type="Texture2D" uid="uid://sab7t4rhtqon" path="res://Decors/tree01_leaves.png" id="4_cqvw6"]
+[ext_resource type="Texture2D" uid="uid://d0wlea1kggcg3" path="res://Decors/tree01_log.png" id="5_h6hn4"]
+[ext_resource type="Texture2D" uid="uid://cxffxtb80suau" path="res://Decors/tree02_log.png" id="6_0dw4n"]
+[ext_resource type="Texture2D" uid="uid://be5r71mlcxxsy" path="res://Decors/tree01_logtest.png" id="7_a2ldn"]
+[ext_resource type="Texture2D" uid="uid://c4wgqdph0ky3n" path="res://Decors/concrete_tiles_sheet_new.png" id="8_xmk06"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vh84y"]
 

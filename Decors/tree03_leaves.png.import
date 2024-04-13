@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddsg8afsdu3hw"
-path="res://.godot/imported/concrete_tiles_sheet.png-c46321961930abd91343facd65818898.ctex"
+uid="uid://db1bjyjytm4vy"
+path="res://.godot/imported/tree03_leaves.png-08d71565516196968e7fe5c3d2fa8418.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://concrete_tiles_sheet.png"
-dest_files=["res://.godot/imported/concrete_tiles_sheet.png-c46321961930abd91343facd65818898.ctex"]
+source_file="res://Decors/tree03_leaves.png"
+dest_files=["res://.godot/imported/tree03_leaves.png-08d71565516196968e7fe5c3d2fa8418.ctex"]
 
 [params]
 
