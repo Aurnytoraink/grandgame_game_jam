@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dp7d7qtep5m7v"]
+[gd_scene load_steps=18 format=3 uid="uid://dp7d7qtep5m7v"]
 
 [ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://scenes/player.tscn" id="1_1nmmt"]
-[ext_resource type="TileSet" uid="uid://d38nj55cyd7wa" path="res://TileSetLayerGraphic.tres" id="2_m4wgy"]
+[ext_resource type="TileSet" uid="uid://dat4abkx4p6p5" path="res://TileSetLayerGraphic.tres" id="2_m4wgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uoeyc"]
 size = Vector2(14466.8, 151)
@@ -44,9 +44,6 @@ size = Vector2(3704, 654)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn23a"]
 size = Vector2(3600.63, 250.5)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_eh1sg"]
-resource_local_to_scene = true
 
 [node name="World" type="Node2D"]
 
@@ -223,162 +220,4 @@ format = 2
 layer_0/enabled = false
 layer_0/modulate = Color(0.517647, 0.156863, 0.113725, 1)
 
-[node name="Wapo" type="Node" parent="."]
-
-[node name="Platform" type="StaticBody2D" parent="Wapo"]
-position = Vector2(507, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform"]
-position = Vector2(5849.25, 191)
-shape = SubResource("RectangleShape2D_uoeyc")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform"]
-position = Vector2(935, 1207)
-scale = Vector2(264.5, -51.5)
-mesh = SubResource("ArrayMesh_nosy5")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="Platform2" type="StaticBody2D" parent="Wapo"]
-position = Vector2(1632, 262)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform2"]
-modulate = Color(0.290196, 0.498039, 0, 1)
-position = Vector2(5621.5, 165)
-scale = Vector2(10.935, 1)
-mesh = SubResource("QuadMesh_sslmh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform2"]
-position = Vector2(3862.35, -939.84)
-shape = SubResource("RectangleShape2D_ge8g8")
-one_way_collision_margin = 37.5
-
-[node name="Platform3" type="StaticBody2D" parent="Wapo"]
-position = Vector2(475, 234)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform3"]
-modulate = Color(0.290196, 0.498039, 0, 1)
-position = Vector2(-260.5, 196)
-scale = Vector2(2.187, 1)
-mesh = SubResource("QuadMesh_sslmh")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wapo/Platform3"]
-position = Vector2(506, 167)
-scale = Vector2(1, 0.661929)
-polygon = PackedVector2Array(15, 18, 133, 436, 310, 733, 502, 887, 855, 907, 1158, 609, 1273, 216, 1248, -10, 1137, -26, 1173, 131, 1147, 378, 1072, 594, 931, 730, 840, 821, 613, 801, 381, 665, 281, 494, 210, 307, 129, 85, 79, -56)
-
-[node name="Platform4" type="StaticBody2D" parent="Wapo"]
-position = Vector2(507, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform4"]
-position = Vector2(7795, -228)
-shape = SubResource("RectangleShape2D_yd3r6")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform4"]
-position = Vector2(15031, -135)
-scale = Vector2(2997.62, -948.875)
-mesh = SubResource("QuadMesh_lfrj7")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="Platform5" type="StaticBody2D" parent="Wapo"]
-position = Vector2(507, 240)
-
-[node name="CollisionsShape2D" type="CollisionShape2D" parent="Wapo/Platform5"]
-position = Vector2(9893, -588.25)
-shape = SubResource("RectangleShape2D_45j4l")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform5"]
-position = Vector2(13247, -626)
-scale = Vector2(1268.25, -1076.75)
-mesh = SubResource("QuadMesh_lfrj7")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="Platform6" type="StaticBody2D" parent="Wapo"]
-position = Vector2(507, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform6"]
-position = Vector2(12601.4, -81)
-shape = SubResource("RectangleShape2D_ws0vw")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform6"]
-position = Vector2(14105.9, -48.9375)
-scale = Vector2(4952.13, -521.875)
-mesh = SubResource("QuadMesh_lfrj7")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="Platform7" type="StaticBody2D" parent="Wapo"]
-position = Vector2(507, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform7"]
-position = Vector2(13235, -578)
-shape = SubResource("RectangleShape2D_d1lk1")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform7"]
-position = Vector2(5011.35, -999.841)
-scale = Vector2(-1556.69, -2414.32)
-mesh = SubResource("QuadMesh_lfrj7")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="Platform8" type="StaticBody2D" parent="Wapo"]
-position = Vector2(507, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform8"]
-position = Vector2(9881, -2172)
-shape = SubResource("RectangleShape2D_hwcsh")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform8"]
-position = Vector2(9877.69, -2168.19)
-scale = Vector2(1876.62, -596.375)
-mesh = SubResource("QuadMesh_lfrj7")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="Platform9" type="StaticBody2D" parent="Wapo"]
-position = Vector2(507, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform9"]
-position = Vector2(13222.8, -2115.25)
-shape = SubResource("RectangleShape2D_q6ahd")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform9"]
-position = Vector2(10025, -570)
-scale = Vector2(1792.12, -1579.38)
-mesh = SubResource("QuadMesh_lfrj7")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="Platform10" type="StaticBody2D" parent="Wapo"]
-position = Vector2(1661, -96)
-physics_material_override = SubResource("PhysicsMaterial_vbvlj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform10"]
-position = Vector2(14515, -275)
-shape = SubResource("RectangleShape2D_a54du")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform10"]
-position = Vector2(6646, 116)
-scale = Vector2(1370.13, -910)
-mesh = SubResource("QuadMesh_lfrj7")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="Platform11" type="StaticBody2D" parent="Wapo"]
-position = Vector2(507, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wapo/Platform11"]
-position = Vector2(3514, 1350)
-shape = SubResource("RectangleShape2D_cn23a")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Wapo/Platform11"]
-position = Vector2(15683, -658)
-scale = Vector2(3697.62, 522.25)
-mesh = SubResource("QuadMesh_lfrj7")
-texture = SubResource("ViewportTexture_euf5x")
-
-[node name="TileMap" type="TileMap" parent="Wapo"]
-material = SubResource("CanvasItemMaterial_eh1sg")
-position = Vector2(622, -458)
-rotation = -1.5708
-tile_set = ExtResource("2_m4wgy")
-rendering_quadrant_size = 20
-collision_animatable = true
-collision_visibility_mode = 1
-format = 2
-layer_0/enabled = false
-layer_0/modulate = Color(0.517647, 0.156863, 0.113725, 1)
+[node name="SceneSwitcher" type="Node" parent="."]

@@ -29,12 +29,6 @@ func _physics_process(delta):
 
 
 
-	if Input.is_action_just_pressed("action_nature"):
-		get_tree().change_scene_to_file("res://scenes/worldN.tscn")
-	if Input.is_action_just_pressed("action_urbain"):
-		get_tree().change_scene_to_file("res://scenes/worldU.tscn")
-	if Input.is_action_just_pressed("action_apocalyptic"):
-		get_tree().change_scene_to_file("res://scenes/worldA.tscn")
 			
 			
 	# Get the input direction and handle the movement/deceleration.

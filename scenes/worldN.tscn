@@ -1,11 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://crrkm8hb4f8f6"]
+[gd_scene load_steps=33 format=3 uid="uid://dyhftxb3kldbg"]
 
 [ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://scenes/player.tscn" id="1_d65fb"]
 [ext_resource type="Script" path="res://scenes/worldN.gd" id="1_vurp2"]
-[ext_resource type="Texture2D" uid="uid://co2do8gbkdboc" path="res://dirt_tiles_sheet.png" id="2_jdqbf"]
-[ext_resource type="Texture2D" uid="uid://sab7t4rhtqon" path="res://tree01_leaves.png" id="3_su7sy"]
-[ext_resource type="Texture2D" uid="uid://d0wlea1kggcg3" path="res://tree01_log.png" id="4_sduy4"]
-[ext_resource type="Texture2D" uid="uid://cxffxtb80suau" path="res://tree02_log.png" id="5_x6rgu"]
+[ext_resource type="Texture2D" path="res://dirt_tiles_sheet.png" id="2_jdqbf"]
+[ext_resource type="Texture2D" path="res://tree01_leaves.png" id="3_su7sy"]
+[ext_resource type="Texture2D" path="res://tree01_log.png" id="4_sduy4"]
+[ext_resource type="Texture2D" path="res://tree02_log.png" id="5_x6rgu"]
 [ext_resource type="Texture2D" uid="uid://be5r71mlcxxsy" path="res://tree01_logtest.png" id="6_2gsdm"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_30cjd"]
