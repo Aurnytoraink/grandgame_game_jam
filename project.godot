@@ -40,6 +40,7 @@ jump={
 
 [layer_names]
 
+2d_physics/layer_1="lay1"
 2d_navigation/layer_1="level1"
 2d_navigation/layer_2="level2"
 2d_navigation/layer_3="level3"
