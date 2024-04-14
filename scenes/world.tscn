@@ -94,6 +94,8 @@ collision_mask = 4
 position = Vector2(-271, 335)
 shape = SubResource("RectangleShape2D_erip4")
 
+[node name="AmbianceMusic" type="AudioStreamPlayer" parent="."]
+
 [connection signal="timeout" from="Timer" to="Player" method="die"]
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
 [connection signal="death_animation_ended" from="Player" to="." method="reset_scene"]

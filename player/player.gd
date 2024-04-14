@@ -112,10 +112,10 @@ func on_dash_finished():
 	state = MOVE
 
 func play_sound(sound):
-	if !audio_streamer.is_playing():
+	if audio_streamer.is_playing():
 		audio_streamer.stop()
-		audio_streamer.stream = sound
-		audio_streamer.play()
+	audio_streamer.stream = sound
+	audio_streamer.play()
 
 func _on_dash_count_down_timeout():
 	can_dash = true
