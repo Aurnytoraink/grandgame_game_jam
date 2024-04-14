@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dp7d7qtep5m7v"]
+[gd_scene load_steps=27 format=3 uid="uid://clwwncopbvk1h"]
 
 [ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://scenes/player.tscn" id="1_1nmmt"]
 [ext_resource type="Texture2D" uid="uid://co2do8gbkdboc" path="res://Decors/dirt_tiles_sheet.png" id="2_qxkpw"]
