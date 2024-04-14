@@ -18,6 +18,7 @@ func _process(_delta):
 		reset_scene()
 
 func reset_scene():
+	play_sound(load("res://musics/forest.ogg"))
 	player.position = $Spawner.position
 	player.is_dead = false
 	player.state_machine.travel("Start")
