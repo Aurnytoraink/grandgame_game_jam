@@ -8,6 +8,10 @@ extends Node2D
 
 
 func _ready():
+	$UI/JungleClock.show()
+	$UI/ApoClock.hide()
+	$UI/CityClock.hide()
+	
 	$UI/JungleFrontTimer.show()
 	$UI/ApoFrontTimer.hide()
 	$UI/CityFrontTimer.hide()
@@ -16,9 +20,7 @@ func _ready():
 	$UI/ApoBackTimer.hide()
 	$UI/CityBackTimer.hide()
 	
-	$UI/JungleClock.show()
-	$UI/ApoClock.hide()
-	$UI/CityClock.hide()
+
 	tile_map_wa.set("layer_0/enabled", false)
 	tile_map_wa.set("layer_1/enabled", false)
 	tile_map_wn.set("layer_0/enabled", true)
@@ -62,7 +64,7 @@ func switch_scene():
 		$UI/CityBackTimer.hide()
 		
 		$UI/ApoClock.show()
-		$UI/JungleFrontTimer.hide()
+		$UI/JungleClock.hide()
 		$UI/CityClock.hide()
 		tile_map_wa.set("layer_0/enabled", true)
 		tile_map_wa.set("layer_1/enabled", true)
@@ -81,7 +83,7 @@ func switch_scene():
 		$UI/ApoBackTimer.hide()
 		$UI/CityBackTimer.hide()
 		
-		$UI/JungleFrontTimer.show()
+		$UI/JungleClock.show()
 		$UI/ApoClock.hide()
 		$UI/CityClock.hide()
 	
@@ -103,7 +105,7 @@ func switch_scene():
 		$UI/JungleBackTimer.hide()
 		
 		$UI/CityClock.show()
-		$UI/JungleFrontTimer.hide()
+		$UI/JungleClock.hide()
 		$UI/ApoClock.hide()
 		
 	
