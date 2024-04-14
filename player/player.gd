@@ -9,9 +9,16 @@ extends CharacterBody2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
+func _ready():
+	$"../Timer".start()
+
+func _on_timer_timeout():
+	print("COUCOU")
+	
 
 
 func _physics_process(delta):
+	$"../CanvasLayer/Label".text="%d:%02d" % [floor($"../Timer".time_left / 60), int($"../Timer".time_left) % 60]
 	#Gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY
@@ -47,3 +54,6 @@ func _physics_process(delta):
 		$AnimationPlayer.stop()
 
 	move_and_slide()
+
+
+
