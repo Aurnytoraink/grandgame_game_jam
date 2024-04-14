@@ -20,9 +20,6 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	$"../Timer".start()
 
-func _on_timer_timeout():
-	print("COUCOU")
-
 enum {
 	MOVE,
 	RUN,
@@ -39,7 +36,7 @@ func _process(delta):
 	$AnimationTree.set("parameters/conditions/is_falling", velocity.y>0)
 	$AnimationTree.set("parameters/conditions/on_ground", is_on_floor())
 	$AnimationTree.set("parameters/conditions/reach_max_jump", 0.1 > velocity.y or -0.1 < velocity.y )
-	$AnimationTree.set("parameters/conditions/is_switching", Input.is_action_just_pressed("switch_time"))
+	$AnimationTree.set("parameters/conditions/is_switching", Input.is_action_just_pressed("switch_apocalypse") or Input.is_action_just_pressed("switch_nature") or Input.is_action_just_pressed("switch_urbain"))
 
 
 func _physics_process(delta):
@@ -85,7 +82,7 @@ func _physics_process(delta):
 	if Input.is_action_just_released("run"):
 		state = MOVE
 
-	if Input.is_action_just_pressed("switch_time"):
+	if Input.is_action_just_pressed("switch_apocalypse") or Input.is_action_just_pressed("switch_nature") or Input.is_action_just_pressed("switch_urbain"):
 		play_sound(switch_time_sfx)
 
 	move_and_slide()
