@@ -5,6 +5,7 @@ extends Node2D
 @onready var tile_map_wu = $TileMapWU
 @onready var player = $Player
 @onready var audio_player = $AmbianceMusic
+@onready var _pause_menu := $PauseMenu
 
 
 func _ready():
@@ -23,6 +24,15 @@ func _process(_delta):
 	$UI/TimerLabel.text="%d:%02d" % [floor($Timer.time_left / 60), int($Timer.time_left) % 60]
 	if Input.is_action_just_pressed("reset"):
 		reset_scene()
+	#menu pause
+	if Input.is_action_pressed("pause_menu"):
+		var tree := get_tree()
+		tree.paused = not tree.paused
+		if tree.paused:
+			_pause_menu.open()
+		else:
+			_pause_menu.close()
+		#get_tree().root.set_input_as_handled()
 
 func reset_scene():
 	play_sound(load("res://musics/forest.ogg"))
