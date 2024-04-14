@@ -8,6 +8,13 @@ extends Node2D
 
 
 func _ready():
+	tile_map_wa.set("layer_0/enabled", false)
+	tile_map_wa.set("layer_1/enabled", false)
+	tile_map_wn.set("layer_0/enabled", true)
+	tile_map_wn.set("layer_1/enabled", true)
+	tile_map_wu.set("layer_0/enabled", false)
+	tile_map_wu.set("layer_1/enabled", false)
+	
 	play_sound(load("res://musics/forest.ogg"))
 	$Timer.start()
 
