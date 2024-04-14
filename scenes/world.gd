@@ -20,7 +20,7 @@ func _ready():
 
 func _process(_delta):
 	switch_scene()
-	$CanvasLayer/TimerLabel.text="%d:%02d" % [floor($Timer.time_left / 60), int($Timer.time_left) % 60]
+	$UI/TimerLabel.text="%d:%02d" % [floor($Timer.time_left / 60), int($Timer.time_left) % 60]
 	if Input.is_action_just_pressed("reset"):
 		reset_scene()
 
