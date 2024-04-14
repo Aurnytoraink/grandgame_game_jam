@@ -44,3 +44,8 @@ func switch_scene():
 		tile_map_wn.set("layer_1/enabled", false)
 		tile_map_wu.set("layer_0/enabled", true)
 		tile_map_wu.set("layer_1/enabled", true)
+
+
+func _on_perso_touche_arrivee(body):
+	print("victoire")
+	player.get_node("Victoire").text = "Victoire"
