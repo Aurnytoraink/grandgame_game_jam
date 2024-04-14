@@ -11,6 +11,10 @@ extends CharacterBody2D
 
 @onready var switch_time_sfx = preload("res://player/switch_time_sfx.wav")
 @onready var die_sound = preload("res://player/MetalSlash1.wav")
+@onready var jump_sound = preload("res://player/quick_jump.wav")
+
+var rng = RandomNumberGenerator.new()
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 func _ready():
@@ -53,7 +57,16 @@ func _physics_process(delta):
 
 	# JUMP
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		var random_number = rng.randf_range(1, 30)
+		if random_number==1:
+			var random_world = rng.randf_range(1, 2)
+			if random_world == 1:
+				pass
+			elif random_world == 2 :
+				pass
+		
 		velocity.y = -JUMP_VELOCITY
+		play_sound(jump_sound)
 		state_machine.travel("jump_up")
 
 	velocity.y = clamp(velocity.y, -1000, 1000)
