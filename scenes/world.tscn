@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://clwwncopbvk1h"]
+[gd_scene load_steps=6 format=3 uid="uid://clwwncopbvk1h"]
 
-[ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://scenes/player.tscn" id="1_1nmmt"]
+[ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://player/player.tscn" id="1_1nmmt"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_orfg1"]
 [ext_resource type="TileSet" uid="uid://dhxmqltrjp8bc" path="res://Decors/tileset.tres" id="3_nppyc"]
+[ext_resource type="Shader" path="res://scenes/shaking_effect.gdshader" id="4_4qn0q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v47xj"]
+shader = ExtResource("4_4qn0q")
+shader_parameter/ShakeStrength = 0.0
+shader_parameter/FactorA = Vector2(100, 100)
+shader_parameter/FactorB = Vector2(1, 1)
+shader_parameter/magnitude = Vector2(0.01, 0.01)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_orfg1")
@@ -64,6 +72,11 @@ offset_right = 281.0
 offset_bottom = 119.0
 text = "default"
 metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_v47xj")
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="timeout" from="Timer" to="Player" method="die"]
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
