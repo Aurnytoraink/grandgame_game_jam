@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal death_animation_ended
+
 @export var JUMP_VELOCITY = 1000
 @export var SPEED = 300
 @export var RUN_SPEED = 300 * 2
@@ -15,21 +17,18 @@ extends CharacterBody2D
 
 var rng = RandomNumberGenerator.new()
 
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-func _ready():
-	$"../Timer".start()
-
 enum {
 	MOVE,
 	RUN,
 	DASH
 }
 
+var is_dead = false
 var can_dash = true
 var state = MOVE
 
 func _process(delta):
+	$Label2.text = "Mort(e)" if is_dead else "Vivant(e)"
 	var etat_anim = state_machine.get_current_node()
 	$Label.text = etat_anim
 	$AnimationTree.set("parameters/Move/blend_position", velocity.x)
@@ -40,16 +39,16 @@ func _process(delta):
 
 
 func _physics_process(delta):
-	$"../CanvasLayer/Label".text="%d:%02d" % [floor($"../Timer".time_left / 60), int($"../Timer".time_left) % 60]
+	#$"../CanvasLayer/Label".text="%d:%02d" % [floor($"../Timer".time_left / 60), int($"../Timer".time_left) % 60]
 	$Camera2D.set_drag_horizontal_offset(Input.get_axis("move_left","move_right") * 2)
 
 	match state:
 		MOVE:
-			walk_state(delta)
+			walk_state()
 		RUN:
-			run_state(delta)
+			run_state()
 		DASH:
-			dash_state(delta,Input.get_axis("move_left","move_right"))
+			dash_state(Input.get_axis("move_left","move_right"))
 
 	#Gravity
 	if not is_on_floor():
@@ -84,7 +83,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("switch_apocalypse") or Input.is_action_just_pressed("switch_nature") or Input.is_action_just_pressed("switch_urbain"):
 		play_sound(switch_time_sfx)
-
+		
 	move_and_slide()
 	update_direction()
 
@@ -94,26 +93,38 @@ func update_direction():
 	elif velocity.x > 0:
 		$Sprite2D.flip_h = false
 
-func walk_state(delta):
+func walk_state():
 	velocity.x = Input.get_axis("move_left","move_right") * SPEED
 
-func run_state(delta):
+func run_state():
 	velocity.x = Input.get_axis("move_left","move_right") * RUN_SPEED
 
-func dash_state(delta,direction):
+func dash_state(direction):
 	velocity.x = direction * DASH_SPEED
 
-func die():
-	state_machine.travel("die")
+func die(_x):
+	is_dead = true
+	state_machine.travel("death")
 	play_sound(die_sound)
+	#queue_free()
 
 func on_dash_finished():
 	state = MOVE
 
 func play_sound(sound):
 	if !audio_streamer.is_playing():
-			audio_streamer.stream = sound
-			audio_streamer.play()
+		audio_streamer.stop()
+		audio_streamer.stream = sound
+		audio_streamer.play()
 
 func _on_dash_count_down_timeout():
 	can_dash = true
+
+func _on_suffocation_detection_body_entered(body):
+	print(body)
+	print("le personnage suffoque")
+
+
+func _on_animation_tree_animation_finished(anim_name):
+	if anim_name == "death":
+		emit_signal("death_animation_ended")
