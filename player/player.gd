@@ -104,8 +104,8 @@ func dash_state(direction):
 
 func die(_x):
 	is_dead = true
-	state_machine.travel("death")
 	play_sound(die_sound)
+	state_machine.travel("death")
 	#queue_free()
 
 func on_dash_finished():

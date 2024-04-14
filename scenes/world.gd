@@ -21,6 +21,14 @@ func reset_scene():
 	player.state_machine.travel("Start")
 	$Timer.start()
 	#relancer l'animation player.set()
+	
+	#Remet nature
+	tile_map_wa.set("layer_0/enabled", false)
+	tile_map_wa.set("layer_1/enabled", false)
+	tile_map_wn.set("layer_0/enabled", true)
+	tile_map_wn.set("layer_1/enabled", true)
+	tile_map_wu.set("layer_0/enabled", false)
+	tile_map_wu.set("layer_1/enabled", false)
 
 func switch_scene():
 	if Input.is_action_just_pressed("switch_apocalypse"):
