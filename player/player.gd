@@ -75,7 +75,7 @@ func _physics_process(delta):
 		state_machine.travel("dash")
 		state = DASH
 
-	if Input.is_action_pressed("run"):
+	if Input.is_action_pressed("run") and state != DASH:
 		state = RUN
 
 	if Input.is_action_just_released("run"):
