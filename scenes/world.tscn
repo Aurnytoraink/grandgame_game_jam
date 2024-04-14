@@ -1,10 +1,19 @@
-[gd_scene load_steps=17 format=3 uid="uid://clwwncopbvk1h"]
+[gd_scene load_steps=26 format=3 uid="uid://clwwncopbvk1h"]
 
-[ext_resource type="PackedScene" uid="uid://c0jxvc81hi3gh" path="res://player/player.tscn" id="1_1nmmt"]
+[ext_resource type="PackedScene" path="res://player/player.tscn" id="1_1nmmt"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_orfg1"]
-[ext_resource type="TileSet" uid="uid://dhxmqltrjp8bc" path="res://Decors/tileset.tres" id="3_nppyc"]
+[ext_resource type="TileSet" uid="uid://1hd48umowmwj" path="res://Decors/tileset.tres" id="3_nppyc"]
 [ext_resource type="Shader" path="res://scenes/shaking_effect.gdshader" id="4_4qn0q"]
 [ext_resource type="Texture2D" uid="uid://dbx3e3wjhidu5" path="res://Decors/portal_victory.png" id="5_isyio"]
+[ext_resource type="Texture2D" uid="uid://c2d1cdshvflk0" path="res://jungle_front_timer.png" id="6_mxtic"]
+[ext_resource type="Texture2D" uid="uid://cqyqkkhph08cs" path="res://apo_front_timer.png" id="7_m5oe0"]
+[ext_resource type="Texture2D" uid="uid://ih06nswglqte" path="res://city_front_timer.png" id="8_nx1pf"]
+[ext_resource type="Texture2D" uid="uid://by66c5h2h28xm" path="res://apo_clock.png" id="8_pq6u6"]
+[ext_resource type="Texture2D" uid="uid://bsfeob2nysxuc" path="res://city_clock.png" id="9_ni6ws"]
+[ext_resource type="Texture2D" uid="uid://v2bb576iel87" path="res://jungle_clock.png" id="10_gtqhr"]
+[ext_resource type="Texture2D" uid="uid://bq1o6c35gndmj" path="res://apo_back_timer.png" id="11_40mwr"]
+[ext_resource type="Texture2D" uid="uid://badlov28yvdu4" path="res://city_back_timer.png" id="12_kmemk"]
+[ext_resource type="Texture2D" uid="uid://32qyflbhgb7d" path="res://jungle_back_timer.png" id="13_ih422"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v47xj"]
 shader = ExtResource("4_4qn0q")
@@ -133,23 +142,73 @@ layer_1/tile_data = PackedInt32Array(524286, 131075, 3, -1179452, 1, 0, -1113916
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="TimerLabel" type="Label" parent="UI"]
-offset_left = 48.0
-offset_top = 45.0
-offset_right = 281.0
-offset_bottom = 119.0
-text = "default"
-metadata/_edit_use_anchors_ = true
+[node name="JungleFrontTimer" type="Sprite2D" parent="UI"]
+position = Vector2(68, 80)
+scale = Vector2(2.1875, 2.1875)
+texture = ExtResource("6_mxtic")
+
+[node name="ApoFrontTimer" type="Sprite2D" parent="UI"]
+position = Vector2(69, 82)
+scale = Vector2(2.3125, 2.3125)
+texture = ExtResource("7_m5oe0")
+
+[node name="CityFrontTimer" type="Sprite2D" parent="UI"]
+position = Vector2(69, 81)
+scale = Vector2(2.21875, 2.21875)
+texture = ExtResource("8_nx1pf")
 
 [node name="ColorRect" type="ColorRect" parent="UI"]
 material = SubResource("ShaderMaterial_v47xj")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 4.0
+offset_right = -6.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 10
 size_flags_vertical = 3
+
+[node name="ApoClock" type="Sprite2D" parent="UI"]
+position = Vector2(1091.5, 76.5)
+scale = Vector2(2.17188, 2.17188)
+texture = ExtResource("8_pq6u6")
+
+[node name="CityClock" type="Sprite2D" parent="UI"]
+position = Vector2(1090, 78)
+scale = Vector2(2.21875, 2.21875)
+texture = ExtResource("9_ni6ws")
+
+[node name="JungleClock" type="Sprite2D" parent="UI"]
+position = Vector2(1090, 78)
+scale = Vector2(2.21875, 2.21875)
+texture = ExtResource("10_gtqhr")
+
+[node name="ApoBackTimer" type="Sprite2D" parent="UI"]
+position = Vector2(68, 76)
+scale = Vector2(2.25, 2.19141)
+texture = ExtResource("11_40mwr")
+
+[node name="CityBackTimer" type="Sprite2D" parent="UI"]
+position = Vector2(59, 75)
+scale = Vector2(2.25, 2.11719)
+texture = ExtResource("12_kmemk")
+
+[node name="JungleBackTimer" type="Sprite2D" parent="UI"]
+position = Vector2(59.5, 76)
+scale = Vector2(2.20313, 2.1875)
+texture = ExtResource("13_ih422")
+
+[node name="TimerLabel" type="Label" parent="UI"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 39.0
+offset_top = 42.0
+offset_right = 272.0
+offset_bottom = 116.0
+text = "default"
+metadata/_edit_use_anchors_ = true
 
 [node name="AmbianceMusic" type="AudioStreamPlayer" parent="."]
 
@@ -165,17 +224,16 @@ frame = 6
 frame_progress = 0.0722253
 
 [node name="ZoneVictoire" type="Area2D" parent="Node2D"]
-position = Vector2(191.844, -142.144)
+position = Vector2(192, -142)
 scale = Vector2(2.15625, 2.42028)
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ZoneVictoire"]
 position = Vector2(-226.592, 164.503)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_erip4")
 
-[connection signal="timeout" from="Timer" to="Player" method="die"]
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Player" method="die"]
 [connection signal="death_animation_ended" from="Player" to="." method="reset_scene"]
 [connection signal="body_entered" from="Node2D/ZoneVictoire" to="." method="_on_perso_touche_arrivee"]

@@ -8,6 +8,17 @@ extends Node2D
 
 
 func _ready():
+	$UI/JungleFrontTimer.show()
+	$UI/ApoFrontTimer.hide()
+	$UI/CityFrontTimer.hide()
+	
+	$UI/JungleBackTimer.show()
+	$UI/ApoBackTimer.hide()
+	$UI/CityBackTimer.hide()
+	
+	$UI/JungleClock.show()
+	$UI/ApoClock.hide()
+	$UI/CityClock.hide()
 	tile_map_wa.set("layer_0/enabled", false)
 	tile_map_wa.set("layer_1/enabled", false)
 	tile_map_wn.set("layer_0/enabled", true)
@@ -42,6 +53,17 @@ func reset_scene():
 
 func switch_scene():
 	if Input.is_action_just_pressed("switch_apocalypse"):
+		$UI/ApoFrontTimer.show()
+		$UI/JungleFrontTimer.hide()
+		$UI/CityFrontTimer.hide()
+		
+		$UI/ApoBackTimer.show()
+		$UI/JungleBackTimer.hide()
+		$UI/CityBackTimer.hide()
+		
+		$UI/ApoClock.show()
+		$UI/JungleFrontTimer.hide()
+		$UI/CityClock.hide()
 		tile_map_wa.set("layer_0/enabled", true)
 		tile_map_wa.set("layer_1/enabled", true)
 		tile_map_wn.set("layer_0/enabled", false)
@@ -51,6 +73,18 @@ func switch_scene():
 		play_sound(load("res://musics/ambiance_apocalypse.ogg"))
 		
 	if Input.is_action_just_pressed("switch_nature"):
+		$UI/JungleFrontTimer.show()
+		$UI/ApoFrontTimer.hide()
+		$UI/CityFrontTimer.hide()
+		
+		$UI/JungleBackTimer.show()
+		$UI/ApoBackTimer.hide()
+		$UI/CityBackTimer.hide()
+		
+		$UI/JungleFrontTimer.show()
+		$UI/ApoClock.hide()
+		$UI/CityClock.hide()
+	
 		tile_map_wa.set("layer_0/enabled", false)
 		tile_map_wa.set("layer_1/enabled", false)
 		tile_map_wn.set("layer_0/enabled", true)
@@ -60,6 +94,19 @@ func switch_scene():
 		play_sound(load("res://musics/forest.ogg"))
 		
 	if Input.is_action_just_pressed("switch_urbain"):
+		$UI/CityFrontTimer.show()
+		$UI/ApoFrontTimer.hide()
+		$UI/JungleFrontTimer.hide()
+		
+		$UI/CityBackTimer.show()
+		$UI/ApoBackTimer.hide()
+		$UI/JungleBackTimer.hide()
+		
+		$UI/CityClock.show()
+		$UI/JungleFrontTimer.hide()
+		$UI/ApoClock.hide()
+		
+	
 		tile_map_wa.set("layer_0/enabled", false)
 		tile_map_wa.set("layer_1/enabled", false)
 		tile_map_wn.set("layer_0/enabled", false)

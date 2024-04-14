@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=25 format=3 uid="uid://dhxmqltrjp8bc"]
+[gd_resource type="TileSet" load_steps=25 format=3 uid="uid://1hd48umowmwj"]
 
 [ext_resource type="Texture2D" uid="uid://co2do8gbkdboc" path="res://Decors/dirt_tiles_sheet.png" id="1_ynmok"]
 [ext_resource type="Texture2D" uid="uid://sab7t4rhtqon" path="res://Decors/tree01_leaves.png" id="2_syoi8"]
