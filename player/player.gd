@@ -14,10 +14,10 @@ extends CharacterBody2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 func _ready():
-    $"../Timer".start()
+	$"../Timer".start()
 
 func _on_timer_timeout():
-    print("COUCOU")
+	print("COUCOU")
 
 enum {
 	MOVE,
@@ -39,8 +39,8 @@ func _process(delta):
 
 
 func _physics_process(delta):
-    $"../CanvasLayer/Label".text="%d:%02d" % [floor($"../Timer".time_left / 60), int($"../Timer".time_left) % 60]
-    $Camera2D.set_drag_horizontal_offset(Input.get_axis("move_left","move_right") * 2)
+	$"../CanvasLayer/Label".text="%d:%02d" % [floor($"../Timer".time_left / 60), int($"../Timer".time_left) % 60]
+	$Camera2D.set_drag_horizontal_offset(Input.get_axis("move_left","move_right") * 2)
 
 	match state:
 		MOVE:
