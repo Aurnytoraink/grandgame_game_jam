@@ -1836,4 +1836,14 @@ layer_1/tile_data = PackedInt32Array(393212, 1, 0, 458748, 1, 1, 524284, 1, 2, 3
 process_callback = 0
 wait_time = 1440.0
 
+[node name="Label" type="Label" parent="."]
+offset_left = 270.0
+offset_top = 43.0
+offset_right = 690.0
+offset_bottom = 130.0
+text = "Appuie sur R pour mourir et réapparaître.
+Attention à ne pas te bloquer en changeant d'époque !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
