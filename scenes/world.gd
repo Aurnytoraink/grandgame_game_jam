@@ -18,6 +18,7 @@ func _process(_delta):
 func reset_scene():
 	player.position = $Spawner.position
 	player.is_dead = false
+	player.state_machine.travel("Start")
 	$Timer.start()
 	#relancer l'animation player.set()
 

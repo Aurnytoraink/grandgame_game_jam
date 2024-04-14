@@ -428,6 +428,7 @@ parameters/conditions/reach_max_jump = false
 parameters/Move/blend_position = 0
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -96.0
 offset_top = -146.0
 offset_right = -6.0
@@ -450,6 +451,7 @@ position = Vector2(0, -97)
 shape = SubResource("RectangleShape2D_7xj2d")
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 offset_left = -86.0
 offset_top = -166.0
 offset_right = -37.0
